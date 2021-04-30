@@ -1,11 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(GetString())
-}
-
-func GetString() (res string) {
-	return "hello world"
+	fmt.Println("nothing implemented")
 }
