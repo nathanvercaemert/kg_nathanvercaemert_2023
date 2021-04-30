@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	fmt.Print(PhoneticCurrent(os.Args[1:], len(os.Args)-1))
+	fmt.Print(Phonetic(os.Args[1:], len(os.Args)-1))
 }
 
-func PhoneticCurrent(array []string, size int) (res string) {
+func Phonetic(array []string, size int) (res string) {
 	var builder strings.Builder
 
 	phoneticMap := make(map[string]string)
@@ -50,8 +50,5 @@ func PhoneticCurrent(array []string, size int) (res string) {
 		}
 		fmt.Fprintf(&builder, "%s", ", ")
 	}
-	// s := builder.String()   // no copying
-	// s = s[:builder.Len()-2] // no copying (removes trailing ", ")
-	// return s
 	return builder.String()[:builder.Len()-2]
 }
