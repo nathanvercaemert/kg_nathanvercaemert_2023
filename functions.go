@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Implements the conversion with a digit-spelling map.
 func PhoneticCurrent(array []string, size int) (res string) {
 	var builder strings.Builder
 
@@ -48,6 +49,7 @@ func PhoneticCurrent(array []string, size int) (res string) {
 	return builder.String()[:builder.Len()-2]
 }
 
+// // Utilizes an initialized map for conversion.
 // func PhoneticPotentialImprovement(array []string, size int) (res string) {
 // 	var builder strings.Builder
 
@@ -91,6 +93,7 @@ func PhoneticCurrent(array []string, size int) (res string) {
 // 	return builder.String()[:builder.Len()-2]
 // }
 
+// // Utilizes a switch for conversion.
 // func PhoneticPotentialImprovement(array []string, size int) (res string) {
 // 	var builder strings.Builder
 
@@ -142,6 +145,7 @@ func PhoneticCurrent(array []string, size int) (res string) {
 // 	return builder.String()[:builder.Len()-2]
 // }
 
+// Utilizes a large map of all possible integers for conversion.
 func PhoneticPotentialImprovement(array []string, size int) (res string) {
 	var builder strings.Builder
 	var giantPhoneticMap = GiantPhoneticMap()
@@ -151,6 +155,7 @@ func PhoneticPotentialImprovement(array []string, size int) (res string) {
 	return builder.String()[:builder.Len()-2]
 }
 
+// The large map of integers generated using Java code.
 func GiantPhoneticMap() (res map[string]string) {
 	giantPhoneticMap := make(map[string]string)
 	giantPhoneticMap["0"] = "Zero"

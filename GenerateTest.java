@@ -3,6 +3,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
+/**
+ * Used to generate the files that will be used to
+ * test the assessment at a large scale. This program
+ * generates two text files: command.txt contains the
+ * command that can be run to execute the Golang
+ * program, and expected.txt is the expected output
+ * of the program based on the arguments (that are
+ * generated as part of command.txt.)
+ */
 public class GenerateTest {
     public static void main (String[] args) {
         FileWriter commandWriter = null;

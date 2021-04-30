@@ -2,6 +2,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Used to generate the code for a function that
+ * maps all values between 0 and 1000 to their phonetic
+ * equivalents. Code for the output file,
+ * GiantPhoneticMap.txt can be copied into the Golang
+ * file.
+ */
 public class GenerateGiantPhoneticMapFunction {
     public static void main(String[] args) {
         FileWriter writer = null;
