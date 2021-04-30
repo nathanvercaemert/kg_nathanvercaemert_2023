@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	fmt.Print(Phonetic(os.Args[1:], len(os.Args)-1))
+	fmt.Print(Phonetic(os.Args, len(os.Args)))
 }
 
-func Phonetic(array []string, size int) (res string) {
+func Phonetic(slice []string, size int) (res string) {
 	var builder strings.Builder
 
 	phoneticMap := make(map[string]string)
@@ -29,8 +29,8 @@ func Phonetic(array []string, size int) (res string) {
 	bigPhoneticMap := make(map[string]string)
 	bigPhoneticMap["0"] = "Zero"
 
-	for i := 0; i < size; i++ {
-		var number string = array[i]
+	for i := 1; i < size; i++ {
+		var number string = slice[i]
 		if val, ok := bigPhoneticMap[number]; ok {
 			fmt.Fprintf(&builder, "%s", val)
 		} else {
