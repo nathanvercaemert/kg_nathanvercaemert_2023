@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-var testArray []int = []int{123, 0, 987456}
+var testArray []string = []string{"123", "0", "987456"}
 var expectedOutput string = "OneTwoThree, Zero, NineEightSevenFourFiveSix"
 
 func TestPhoneticCurrent(t *testing.T) {
